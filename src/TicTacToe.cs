@@ -17,7 +17,14 @@ namespace src
 
         public void PlaceMarkerAt(int v1, int v2)
         {
-            _currentPlayer = "O";
+            if(_currentPlayer == "O")
+            {
+                _currentPlayer = "X";
+            }
+            else
+            {
+                _currentPlayer = "O";
+            }
         }
     }
 }

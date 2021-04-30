@@ -43,5 +43,16 @@ namespace Test
             Assert.AreEqual("O", game.GetCurrentPlayer());
         }
 
+        [Test]
+        public void Return_X_As_Third_Player()
+        {
+            var game = new TicTacToe();
+
+            game.PlaceMarkerAt(1, 1);
+            game.PlaceMarkerAt(1, 0);
+
+            Assert.AreEqual("X", game.GetCurrentPlayer());
+        }
+
     }
 }
