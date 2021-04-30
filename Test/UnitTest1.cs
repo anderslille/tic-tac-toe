@@ -20,50 +20,48 @@ namespace Test
 
     public class TicTacToeShould
     {
+        private TicTacToe _game;
         [SetUp]
         public void Setup()
         {
+            _game = new TicTacToe();
         }
 
         [Test]
         public void Return_X_As_First_Player()
         {
-            var game = new TicTacToe();
             
-            Assert.AreEqual("X", game.GetCurrentPlayer());
+            Assert.AreEqual("X", _game.GetCurrentPlayer());
         }
 
         [Test]
         public void Return_O_As_Second_Player()
         {
-            var game = new TicTacToe();
 
-            game.PlaceMarkerAt(1, 1);
+            _game.PlaceMarkerAt(1, 1);
 
-            Assert.AreEqual("O", game.GetCurrentPlayer());
+            Assert.AreEqual("O", _game.GetCurrentPlayer());
         }
 
         [Test]
         public void Return_X_As_Third_Player()
         {
-            var game = new TicTacToe();
 
-            game.PlaceMarkerAt(1, 1);
-            game.PlaceMarkerAt(1, 0);
+            _game.PlaceMarkerAt(1, 1);
+            _game.PlaceMarkerAt(1, 0);
 
-            Assert.AreEqual("X", game.GetCurrentPlayer());
+            Assert.AreEqual("X", _game.GetCurrentPlayer());
         }
 
         [Test]
         public void Return_O_As_Fourth_Player()
         {
-            var game = new TicTacToe();
 
-            game.PlaceMarkerAt(1, 1);
-            game.PlaceMarkerAt(1, 0);
-            game.PlaceMarkerAt(0, 1);
+            _game.PlaceMarkerAt(1, 1);
+            _game.PlaceMarkerAt(1, 0);
+            _game.PlaceMarkerAt(0, 1);
 
-            Assert.AreEqual("O", game.GetCurrentPlayer());
+            Assert.AreEqual("O", _game.GetCurrentPlayer());
         }
 
     }
