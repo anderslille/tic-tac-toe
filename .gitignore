@@ -1,1 +1,4 @@
 *.lock
+bin
+obj
+.vs
