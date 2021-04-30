@@ -8,12 +8,7 @@ namespace src
         {
         }
 
-        public void PlaceMarkerAt(int row, int col)
-        {
-            
-        }
-
-        public string GetMarkerAt(int row, int col)
+        public string GetCurrentPlayer()
         {
             return "X";
         }

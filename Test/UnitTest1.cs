@@ -26,16 +26,11 @@ namespace Test
         }
 
         [Test]
-        public void Place_X_On_First_Move()
+        public void Return_X_As_First_Player()
         {
-            // arrange
             var game = new TicTacToe();
-            // act
-            var row = 1;
-            var col = 1;
-            game.PlaceMarkerAt(row, col);
-            //assert
-            Assert.AreEqual("X", game.GetMarkerAt(row, col));
+            Assert.AreEqual("X", game.GetCurrentPlayer());
         }
+
     }
 }
