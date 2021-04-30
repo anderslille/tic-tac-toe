@@ -14,9 +14,7 @@ namespace Test
 
     /*
      * hvem sin tur er det
-     * 
-    * 
-    */
+     */
 
 
     public class TicTacToeShould
@@ -27,7 +25,6 @@ namespace Test
         {
             _game = new TicTacToe();
         }
-
         
         [Test]
         public void Return_X_As_First_Player()
