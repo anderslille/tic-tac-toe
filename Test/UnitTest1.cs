@@ -29,7 +29,18 @@ namespace Test
         public void Return_X_As_First_Player()
         {
             var game = new TicTacToe();
+            
             Assert.AreEqual("X", game.GetCurrentPlayer());
+        }
+
+        [Test]
+        public void Return_O_As_Second_Player()
+        {
+            var game = new TicTacToe();
+
+            game.PlaceMarkerAt(1, 1);
+
+            Assert.AreEqual("O", game.GetCurrentPlayer());
         }
 
     }
